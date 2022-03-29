@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const User = (props) => {
     const {id,name,username} = props.user
@@ -7,12 +7,13 @@ const User = (props) => {
     const navigate = useNavigate()
 
     const showUserDetails = () => {
-        const path = `/users/${id}`
+        const path = `/user/${id}`
         navigate(path)
     }
     return (
         <div>
             <h3>Name:{name}</h3>
+            <Link to={`/user/${id}`}>Click here for details</Link>
             <button onClick={showUserDetails}>{username} id: {id}</button>
         </div>
     );
