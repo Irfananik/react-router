@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Users from './components/Users/Users';
@@ -9,7 +10,7 @@ import Users from './components/Users/Users';
 function App() {
   return (
     <div className="App">
-      <h1>Learn About React Router</h1>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
